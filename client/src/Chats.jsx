@@ -38,8 +38,8 @@ function Chats({ socket, username, room }) {
       </div>
 
       {/* ✅ Chat body scrollable, displays messages */}
-      <div className="chat-body h-[335px] border border-gray-800 bg-white overflow-y-scroll p-2">
-        <ScrollToBottom className='w-full h-full overflow-y-scroll overflow-x-hidden'>
+      <div className="chat-body h-[335px] border border-gray-800 bg-white p-0 overflow-hidden">
+        <ScrollToBottom className="w-full h-full p-2 overflow-y-auto overflow-x-hidden">
         {messageList.map((msg, index) => {
           const isYou = username === msg.author; // ✅ Check if message is from current user
           return (
